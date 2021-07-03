@@ -1,0 +1,725 @@
+{
+    "variables": [],
+    "info": {
+        "name": "Laravel API",
+        "_postman_id": "fba0e0fb-6ea7-4cbf-b8b4-2ef179258087",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.0.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Address Book",
+            "description": "",
+            "item": [
+                {
+                    "name": "Store an address",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "35.153.83.25\/",
+                            "path": "api\/v1\/address-book\/store",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {token}"
+                            },
+                            {
+                                "key": "X-Authorization",
+                                "value": "{apikey}"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"voluptatum\",\n    \"email\": \"qui\",\n    \"address\": \"consectetur\",\n    \"postal_code\": \"atque\",\n    \"contact_number\": \"eum\",\n    \"country_id\": \"ea\",\n    \"state_id\": \"et\",\n    \"city_id\": \"debitis\",\n    \"is_self\": \"saepe\",\n    \"address_type\": \"atque\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Update an address",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "35.153.83.25\/",
+                            "path": "api\/v1\/address-book\/update\/:id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "vel",
+                                    "description": "id of an address"
+                                }
+                            ]
+                        },
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {token}"
+                            },
+                            {
+                                "key": "X-Authorization",
+                                "value": "{apikey}"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"consequuntur\",\n    \"email\": \"sed\",\n    \"address\": \"ex\",\n    \"postal_code\": \"numquam\",\n    \"contact_number\": \"reprehenderit\",\n    \"country_id\": \"ipsa\",\n    \"state_id\": \"fuga\",\n    \"city_id\": \"adipisci\",\n    \"is_self\": \"est\",\n    \"address_type\": \"numquam\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Get addresses",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "35.153.83.25\/",
+                            "path": "api\/v1\/address-book\/get-addresses\/:isSelf",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "isSelf",
+                                    "key": "isSelf",
+                                    "value": "nihil",
+                                    "description": "if own address 1 else 0 (bool)"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {token}"
+                            },
+                            {
+                                "key": "X-Authorization",
+                                "value": "{apikey}"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Trash an address",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "35.153.83.25\/",
+                            "path": "api\/v1\/address-book\/delete\/:id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "non",
+                                    "description": "id of an address"
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {token}"
+                            },
+                            {
+                                "key": "X-Authorization",
+                                "value": "{apikey}"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Trashed addresses",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "35.153.83.25\/",
+                            "path": "api\/v1\/address-book\/trashed",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {token}"
+                            },
+                            {
+                                "key": "X-Authorization",
+                                "value": "{apikey}"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Restore a trashed address",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "35.153.83.25\/",
+                            "path": "api\/v1\/address-book\/restore\/:id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "expedita",
+                                    "description": "id of an address"
+                                }
+                            ]
+                        },
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {token}"
+                            },
+                            {
+                                "key": "X-Authorization",
+                                "value": "{apikey}"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Parcel",
+            "description": "",
+            "item": [
+                {
+                    "name": "Create Parcel",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "35.153.83.25\/",
+                            "path": "api\/v1\/ship-parcel\/create",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {token}"
+                            },
+                            {
+                                "key": "X-Authorization",
+                                "value": "{apikey}"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"parcel_category_id\": 18,\n    \"parcel_charge_id\": 2,\n    \"address_from_id\": 2,\n    \"address_to_id\": 14,\n    \"parcel_station_id\": 2,\n    \"approx_delivery_date\": \"et\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Place",
+            "description": "",
+            "item": [
+                {
+                    "name": "All countries",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "35.153.83.25\/",
+                            "path": "api\/v1\/place\/all-country",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {token}"
+                            },
+                            {
+                                "key": "X-Authorization",
+                                "value": "{apikey}"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Fixed countries",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "35.153.83.25\/",
+                            "path": "api\/v1\/place\/fixed-country",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {token}"
+                            },
+                            {
+                                "key": "X-Authorization",
+                                "value": "{apikey}"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Search countries",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "35.153.83.25\/",
+                            "path": "api\/v1\/place\/search-country",
+                            "query": [
+                                {
+                                    "key": "query",
+                                    "value": "12",
+                                    "description": "Search keyword of country's ?query=name.",
+                                    "disabled": false
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {token}"
+                            },
+                            {
+                                "key": "X-Authorization",
+                                "value": "{apikey}"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "States all\/search",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "35.153.83.25\/",
+                            "path": "api\/v1\/place\/states-of-country\/:countryId",
+                            "query": [
+                                {
+                                    "key": "query",
+                                    "value": "officiis",
+                                    "description": "optional Search keyword of state's ?query=name.",
+                                    "disabled": false
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "id": "countryId",
+                                    "key": "countryId",
+                                    "value": "7",
+                                    "description": "id of country."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {token}"
+                            },
+                            {
+                                "key": "X-Authorization",
+                                "value": "{apikey}"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Cities all\/search",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "35.153.83.25\/",
+                            "path": "api\/v1\/place\/cities-of-state\/:stateId",
+                            "query": [
+                                {
+                                    "key": "query",
+                                    "value": "ex",
+                                    "description": "optional Search keyword of city's ?query=name.",
+                                    "disabled": false
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "id": "stateId",
+                                    "key": "stateId",
+                                    "value": "aut",
+                                    "description": "id of state."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {token}"
+                            },
+                            {
+                                "key": "X-Authorization",
+                                "value": "{apikey}"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Ship",
+            "description": "",
+            "item": [
+                {
+                    "name": "Get Parcel Category",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "35.153.83.25\/",
+                            "path": "api\/v1\/ship-parcel-attr\/get-categories",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {token}"
+                            },
+                            {
+                                "key": "X-Authorization",
+                                "value": "{apikey}"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Get Parcel price",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "35.153.83.25\/",
+                            "path": "api\/v1\/ship-parcel-attr\/get-price\/:category\/:from\/:to",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "category",
+                                    "key": "category",
+                                    "value": "quo",
+                                    "description": "The ID of the Parcel category."
+                                },
+                                {
+                                    "id": "from",
+                                    "key": "from",
+                                    "value": "8",
+                                    "description": "The ID of the from country"
+                                },
+                                {
+                                    "id": "to",
+                                    "key": "to",
+                                    "value": "15",
+                                    "description": "The ID of the to country"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {token}"
+                            },
+                            {
+                                "key": "X-Authorization",
+                                "value": "{apikey}"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Store",
+            "description": "",
+            "item": [
+                {
+                    "name": "Get Nearest Store",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "35.153.83.25\/",
+                            "path": "api\/v1\/ship-parcel-store\/nearest-stores",
+                            "query": [
+                                {
+                                    "key": "lat",
+                                    "value": "voluptates",
+                                    "description": "latitude of users position",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "lon",
+                                    "value": "et",
+                                    "description": "longitude of users position",
+                                    "disabled": false
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {token}"
+                            },
+                            {
+                                "key": "X-Authorization",
+                                "value": "{apikey}"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "general",
+            "description": "",
+            "item": [
+                {
+                    "name": "api\/exchange",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "35.153.83.25\/",
+                            "path": "api\/exchange",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {token}"
+                            },
+                            {
+                                "key": "X-Authorization",
+                                "value": "{apikey}"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        }
+    ]
+}
