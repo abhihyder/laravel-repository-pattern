@@ -3,6 +3,7 @@
 
 namespace App\Repositories\Eloquent;
 
+use App\Jobs\Admin\Ship\EnvelopeQrCodeGenerate;
 use App\Models\Ship\EnvelopeQrCode;
 use App\Repositories\Interfaces\EnvelopeQrCodeRepositoryInterface;
 use Illuminate\Support\Facades\DB;
@@ -31,7 +32,9 @@ class EnvelopeQrCodeRepository extends AbstractRepository implements EnvelopeQrC
      */
     public function create(array $attributes)
     {
-        return $this->model->create($attributes);
+        EnvelopeQrCodeGenerate::dispatch($attributes)
+            ->delay(now()->addSeconds(5));
+        return true;
     }
 
     public function update($id, array $attributes)
